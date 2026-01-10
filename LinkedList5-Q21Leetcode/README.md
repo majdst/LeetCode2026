@@ -8,7 +8,7 @@ But it is not efficient as Picture below:
 
 
 
-!\[picture](LeetCodeQ21\_1.jpg)
+!\[picture](LeetCodeQ21_1.jpg)
 
 
 
@@ -16,7 +16,7 @@ But at the second method: in one go as described in picture below, it will be ef
 
 
 
-!\[picture](LeetCodeQ21\_2.jpg)
+!\[picture](LeetCodeQ21_2.jpg)
 
-!\[picture](LeetCodeQ21\_3.jpg)
+!\[picture](LeetCodeQ21_3.jpg)
 
