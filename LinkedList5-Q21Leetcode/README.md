@@ -3,7 +3,7 @@ The first Method come to my mind is to have a function to sort, and in the main 
 go to end of first linkedlist and attach the second linkedlist to end of first one.
 
 But it is not efficient as Picture below:
-!\[picture](LeetCodeQ21_1.jpg)
+![Linked List Sorting Diagram](LinkedList2.jpg)
 
 
 
