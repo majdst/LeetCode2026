@@ -8,6 +8,6 @@ But it is not efficient as Picture below:
 
 
 But at the second method: in one go as described in picture below, it will be efficient and in one go, sorted list will be executed:
-!\[picture](LeetCodeQ21_2.jpg)
-!\[picture](LeetCodeQ21_3.jpg)
+![Linked List Sorting Diagram](LeetCodeQ21_2.jpg)
+![Linked List Sorting Diagram](LeetCodeQ21_3.jpg)
 
