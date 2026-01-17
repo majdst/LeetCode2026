@@ -3,4 +3,5 @@ Given the head of a singly linked list, return the value of the middle node of t
 
 !\[Linked List Middle Node](LinkedList5.jpg)
 
+Be careful about difinition of middle
 
