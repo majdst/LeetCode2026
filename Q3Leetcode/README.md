@@ -6,5 +6,5 @@ For bruteforece which is O(N^3).
 
 
 
-!\[Linked List remove](Brutforce.jpg)
+!\[Linked List remove]([Brutforce.jpg](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/Brutforce.jpg))
 
