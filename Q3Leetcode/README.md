@@ -9,5 +9,23 @@ why bruteforce is wasteful: imagine checking "abca"
 -  Then we throw away all that work and start fresh with "bcab"
 
 
-!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/Brutforce.jpg)
+!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/Brutforce.JPG)
+
+
+
+And better solution is sliding:
+
+
+
+instead of going through every possible combination, just move along the window and remove the left duplicate 
+
+
+
+!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/slide1.JPG)
+
+and
+
+!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/slide2.JPG)
+
+
 

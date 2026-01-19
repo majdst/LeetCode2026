@@ -2,37 +2,26 @@ class Solution:
 
     def lofLong(self, s:str) -> int:
         
-        def helperfunc(string:str):
-            seen = set()
-
-            for char in string:
-
-                if char in seen:
-
-                    return False
-            
-                seen.add(char)
-
-            return True
-        
-        
+        seen = set()
         max_l = 0
-        n = len(s)
+        l = 0
+        m = len(s)
 
-        for i in range(n):
+        for r in range(m):
 
-            for j in range(i+1, n+1):
+            while s[r] in seen:
 
-                y = s[i:j]
+                seen.remove(s[l])
 
-                if helperfunc(y):
+                l += 1
 
-                    max_l = max(max_l, j-i)
+            seen.add(s[r])
 
-        return max_l
-    
+            max_l = max(max_l, r - l + 1)
+
+        return max_l    
 
 mylist = Solution()
-x1 = mylist.lofLong("abcabcbpoqwe")
+x1 = mylist.lofLong("abcabcb")
 
 print(x1)
