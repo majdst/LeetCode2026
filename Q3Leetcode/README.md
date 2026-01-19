@@ -11,7 +11,7 @@ why bruteforce is wasteful: imagine checking "abca"
 
 
 
-!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/Q3Leetcode/Brutforce.JPG)
+!\[BruteForce Solution](Brutforce.jpg)
 
 
 
@@ -23,9 +23,9 @@ instead of going through every possible combination, just move along the window 
 
 
 
-!\[Description](slide1.jpg)
+!\[Slide1](slide1.jpg)
 
 and
 
-!\[Description](slide2.jpg)
+!\[Slide2](slide2.jpg)
 
