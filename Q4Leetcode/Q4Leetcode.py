@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Node:
 
     def __init__(self, data:int, next = None):
@@ -143,3 +144,29 @@ print("****************")
 x6 = mylist.sortlist(x1)
 mylist.print(x6)
 
+=======
+class Solution:
+
+    def twolist(self, list1: list, list2: list)->int:
+
+        merge_list = list1+list2
+
+        merge_list.sort()
+
+
+        m = len(merge_list)
+
+        if m%2 == 0:
+
+            median = (merge_list[m//2] + merge_list[m//2 - 1])/2
+
+        else:
+            median = merge_list[m//2]
+
+        return median
+    
+
+mylist = Solution()
+x = mylist.twolist([1,2], [3,4])
+print(x)
+>>>>>>> 1a5c65402df07341ff929ca4698ac0ef1404a070

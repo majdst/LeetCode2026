@@ -23,9 +23,14 @@ instead of going through every possible combination, just move along the window 
 
 
 
-!\[Sliding Window Example 1](https://raw.githubusercontent.com/majdst/LeetCode2026/main/slide1.jpg)
+
+
+!\[Sliding Window Example 1](Brutforce.jpg)
+=======
+!\[Slide1](slide1.jpg)
 
 and
 
-!\[Sliding Window Example 1](https://raw.githubusercontent.com/yourusername/yourrepo/main/slide1.jpg)
+!\[Slide2](slide2.jpg)
+
 
