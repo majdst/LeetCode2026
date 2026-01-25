@@ -8,3 +8,9 @@ Please be mindful that the question is asking N from the end of the list.
 
 /)
 
+
+
+Although the "counting solution" is efficient but I have to learn other methods, too.
+
+So, Sliding method to use to pointer left and right to find the one before desired one.
+

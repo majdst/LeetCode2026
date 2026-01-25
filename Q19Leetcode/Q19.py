@@ -38,28 +38,28 @@ class LinkedList:
     
     def rmvNth(self, head:Node, n:int)->Node:
 
-        position = 0
-        current = head
         
+        dummy = Node(0)
+        dummy.next = head
 
-        m = self.leng(head)
-        p = m - n
+        l = dummy #left pointer
+        r = dummy #right pointer
 
-        if p == 0:
-            return current.next
-        
-        while current:
+        for _ in range(n+1):
+            r = r.next #making gap between two pointer
 
-            if position == p -1:
-                current.next = current.next.next
+        while r:
+            l = l.next
+            r = r.next
 
-            current = current.next
-            position +=1
-        
-        return head
-        
+        l.next = l.next.next
+
+        return dummy.next
+
+
+
 lst = LinkedList()
-c1 = lst.helper([1])
+c1 = lst.helper([1, 2, 3, 5, 6])
 c3 = lst.leng(c1)
 
 print(c3)
