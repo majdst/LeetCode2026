@@ -4,5 +4,5 @@ write a helper function to measure the length of the linkedlist.
 
 Please be mindful that the question is asking N from the end of the list.
 
-!\[Q19](./Q19A.jpg)
+!\[Q19](Q19Leetcode/Q19A.jpg)
 
