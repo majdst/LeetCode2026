@@ -11,7 +11,7 @@ why bruteforce is wasteful: imagine checking "abca"
 
 
 
-!\[BruteForce Solution](Brutforce.jpg)
+![BruteForce Solution](Brutforce.jpg)
 
 
 
@@ -25,12 +25,12 @@ instead of going through every possible combination, just move along the window 
 
 
 
-!\[Sliding Window Example 1](Brutforce.jpg)
+
 =======
-!\[Slide1](slide1.jpg)
+![Slide1](slide1.jpg)
 
 and
 
-!\[Slide2](slide2.jpg)
+![Slide2](slide2.jpg)
 
 
