@@ -1,172 +1,30 @@
-<<<<<<< HEAD
-class Node:
+"""Example 1:
 
-    def __init__(self, data:int, next = None):
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.00000
+Explanation: merged array = [1,2,3] and median is 2."""
 
-        self.data = data
-        self.next = next
-
-class LinkedList:
-
-    def helper(self, l:Node):
-
-        dummy = Node(0)
-        current = dummy
-
-        for num in l:
-
-            current.next = Node(num)
-            current = current.next
-
-        return dummy.next
-    
-    def print(self, l:Node):
-
-        current = l
-
-        while current is not None:
-
-            print(current.data, end = " -> ")
-            current = current.next
-
-        print("None")
-
-    def search(self, l:Node, item:int):
-
-
-        current = l
-        position = 0
-
-        while current is not None:
-
-            if current.data == item:
-                print(f"{current.data} is in {position}")
-            
-            
-
-
-            position += 1
-
-            current = current.next
-
-    def get_length(self, l:Node):
-
-        current = l
-        count = 0
-        while current:
-
-            count += 1
-            current = current.next
-
-        return count
-     
-    def sortlinkRemove(self, l:Node):
-
-        current = l
-
-       
-
-        while current and current.next:
-
-                if current.data == current.next.data:
-                    current.next = current.next.next
-
-                    
-                else:
-                    current = current.next
-        return l
-
-    def unsortedLinkRemove(self, l:Node):
-        return 
-    
-    def reverse(self, l:Node):
-
-        current = l
-
-        back = None
-
-        while current:
-
-            next_node = current.next
-
-            current.next = back
-
-            back = current
-            current = next_node
-
-        l = back
-        return l
-    
-    def sortlist(self, l:Node):
-
-        
-
-        sw = True
-
-        while sw:
-
-            sw = False
-            current = l
-
-            while current and current.next:
-
-                if current.data > current.next.data:
-
-                    current.data, current.next.data = current.next.data, current.data
-                    sw = True
-                
-                current = current.next
-
-        return l
-
-
-mylist = LinkedList()
-x1 = mylist.helper([1,1,1,2,2,8,4,5,6,14, 6,6,7,7,7,7,7,8])
-mylist.print(x1)
-print("************")
-
-# x2 = mylist.search(x1, 2)
-
-# print("***************")
-
-# x3 = mylist.get_length(x1)
-# print(x3)
-
-# print("***************")
-# x4 = mylist.sortlinkRemove(x1)
-# mylist.print(x4)
-
-# print("****************")
-# x5 = mylist.reverse(x1)
-# mylist.print(x5)
-
-print("****************")
-x6 = mylist.sortlist(x1)
-mylist.print(x6)
-
-=======
 class Solution:
+    def median(self, num1:list, num2:list)->int:
 
-    def twolist(self, list1: list, list2: list)->int:
+        x = num1 + num2
 
-        merge_list = list1+list2
+        x.sort()
 
-        merge_list.sort()
+        m = len(x)
+        median = 0
 
+        if m % 2 == 0:
 
-        m = len(merge_list)
-
-        if m%2 == 0:
-
-            median = (merge_list[m//2] + merge_list[m//2 - 1])/2
-
+            median = (x[m//2 - 1] + x[m//2]) * 0.5
+        
         else:
-            median = merge_list[m//2]
+
+            median = x[m//2]
+
 
         return median
-    
 
-mylist = Solution()
-x = mylist.twolist([1,2], [3,4])
-print(x)
->>>>>>> 1a5c65402df07341ff929ca4698ac0ef1404a070
+y = Solution()
+print(y.median([1,3], [2, 4]))
+
