@@ -4,7 +4,7 @@ It perfectly work and Time complexity is O(n) but based on what I see, having a 
 
 what reviewers are looking for.
 
-!\[Brutforce](BF.jpg)
+![Brutforce](BF.jpg)
 
 
 

@@ -8,5 +8,5 @@ For better understanding, I brought one iteration as below:
 
 
 
-!\[Linked List remove](https://raw.githubusercontent.com/majdst/LeetCode2026/main/LinkedList6-UnsortedRemove/Unsorted.jpg)
+![Linked List remove](Unsorted.jpg)
 
