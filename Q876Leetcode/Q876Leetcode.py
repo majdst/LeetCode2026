@@ -34,7 +34,7 @@ class LinkedList:
         r = head
         left = head
 
-        while r and r.next:
+        while r and r.next: #This new method makes it perfect and more readible
 
             left = left.next
             r = r.next.next
