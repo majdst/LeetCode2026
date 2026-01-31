@@ -30,31 +30,18 @@ class LinkedList:
 
     def middle(self, l:Node):
 
-        def length(lnode:Node):
+        head = l
+        r = head
+        left = head
 
-            current = lnode
+        while r and r.next:
 
-            m = 0
+            left = left.next
+            r = r.next.next
 
-            while current:
-                current = current.next
-                m += 1
-            return m
-        
-        lng = length(l)
-
-        current = l
-        m = 0
-
-        
-
-        while m < (lng//2):
-            current = current.next
-            m += 1
-
-        return current
+        return left
     
 x = LinkedList()
-x1 = x.helper([1,2,3,4,5,6])
+x1 = x.helper([1,2,3,4,5])
 x.pr(x1)
 x.pr(x.middle(x1))
