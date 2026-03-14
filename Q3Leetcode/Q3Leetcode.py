@@ -1,27 +1,20 @@
 class Solution:
+    def leng(self, s:str)->int:
 
-    def lofLong(self, s:str) -> int:
-        
-        seen = set()
+        l = len(s)
+
         max_l = 0
-        l = 0
-        m = len(s)
 
-        for r in range(m):
+        for i in range(l):
+            for j in range(i+1, l+1):
 
-            while s[r] in seen:
+                substring = s[i:j]
 
-                seen.remove(s[l])
+                if len(substring) == len(set(substring)):
 
-                l += 1
-
-            seen.add(s[r])
-
-            max_l = max(max_l, r - l + 1)
-
-        return max_l    
-
-mylist = Solution()
-x1 = mylist.lofLong("abcabcb")
-
-print(x1)
+                    max_l = max(max_l, len(substring))
+        
+        return max_l
+    
+mj = Solution()
+print(mj.leng("abcdabcbb"))
