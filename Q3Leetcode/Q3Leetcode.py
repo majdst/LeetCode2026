@@ -2,17 +2,19 @@ class Solution:
     def leng(self, s:str)->int:
 
         l = len(s)
-
+        seen = set()
+        left = 0
         max_l = 0
+        
+        for right in range(l):
+            if s[right] in seen:
 
-        for i in range(l):
-            for j in range(i+1, l+1):
+                seen.remove(s[left])
+                left += 1
 
-                substring = s[i:j]
+            seen.add(s[right])
+            max_l = max(max_l, right - left + 1)
 
-                if len(substring) == len(set(substring)):
-
-                    max_l = max(max_l, len(substring))
         
         return max_l
     
