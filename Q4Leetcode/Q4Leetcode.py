@@ -6,37 +6,38 @@ Explanation: merged array = [1,2,3] and median is 2."""
 
 class Solution:
     def median(self, num1:list, num2:list)->int:
-        newlist = []
-        right = 0
-        left = 0
-
-        while right < len(num1) and left < len(num2):
-
-            if num1[right] < num2[left]:
-
-                newlist.append(num1[right])
-                right += 1
-            else:
-                newlist.append(num2[left])
-                left += 1
-
-        while right < len(num1):
-            newlist.append(num1[right])
-            right += 1
-
-        while left < len(num2):
-            newlist.append(num2[left])
-            left += 1
-
-        m = len(newlist)
-        if m %2 == 0:
-
-            median = (newlist[m//2 - 1] + newlist[m//2])*0.5
-
-        else:
-            median = (newlist[m//2])
         
-        return median
+        #Binary Search Method
+
+        if len(num1) > len(num2):
+
+            num1, num2 = num2, num1
+
+        m, n = len(num1), len(num2)
+
+        low, high = 0, m
+
+        while low <= high:
+            cut1 = (low + high) // 2
+            cut2 = (m + n) //2 - cut1
+
+            l1 = float('-inf') if cut1 == 0 else num1[cut1 - 1]
+            r1 = float('inf') if cut1 == m else num1[cut1]
+
+            l2 = float('-inf') if cut2 == 0 else num2[cut2 - 1]
+            r2 = float('inf') if cut2 == n else num2[cut2]
+
+            if l1 > r2:
+                high = cut1 - 1
+
+            elif l2 > r1:
+                low = cut1 + 1
+            else:
+                if (m+n) % 2 != 0:
+                    return min(r1, r2)
+                else:
+                    return (max(l1, l2) + min(r1, r2)) / 2
+                
     
 
 
