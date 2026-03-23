@@ -1,33 +1,19 @@
 class Solution:
     def isPalindrom(self, s:str)->str:
-        m = len(s)
-        # ababc
+        def rev(x:str) -> str:
+           return x == x[::-1]
+        l = len(s)
+        maxL = ""
 
-        def x(left:int, right:int)->int:
+        for i in range(l):
+           for j in range(i+1, l+1):
+               substring = s[i:j]
 
-            while left >= 0 and right < m and s[left] == s[right]: #Explain what is going on here
-
-                left -= 1
-                right += 1
-
-            return right - left -1
+               if rev(substring):
+                   if len(substring) > len(maxL):
+                       maxL = substring
         
-        maxL = 0
-        current = 0
-
-        for i in range(m):
-
-            l1 = x(i , i)
-
-            l2 = x(i, i+1)
-
-            leng = max(l1 , l2)
-
-            if leng > maxL:
-                maxL = leng
-
-                current = i - (leng - 1)//2 #explain what is going on here
-        return s[current: current+maxL] #explain what is going on here
+        return maxL
         
     
 x1 = Solution()
