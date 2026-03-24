@@ -1,23 +1,34 @@
 class Solution:
-    def searchAlgorithm(self, num1: list, target:int)->int:
 
-        low, high = 0, len(num1)-1
+    def linearSearch(self, s:list, trg:int)->int:
+        #LinearSearch with TimeComplexity of O(n)
+
+        l = len(s)
+
+        for i in range(l):
+            if s[i] == trg:
+                return i
+            
+        return -1
+    
+    def binarySearch(self, s:list, trg:int)->int:
+        # Binary Search with TimeComplexity of O(log(n))
+        low, mid = 0, 0
+        high = len(s) - 1
 
         while low <= high:
-            
-            mid = (low+high)//2
+            mid = (low + high) // 2
 
-            if num1[mid] == target:
-                return mid
-            elif num1[mid] < target:
+            if s[mid] > trg:
+                high = mid - 1
+
+            elif s[mid] < trg:
                 low = mid + 1
 
             else:
-                high = mid - 1
-
-        return -1 #Not found
-            
-
-x= Solution()
-y = x.searchAlgorithm([1,3,5,7,9], 7)
-print(y)
+                return mid
+        return -1
+    
+x = Solution()
+print(x.binarySearch([2,4,7,10, 11, 32, 45, 87], 45))
+print(x.linearSearch([2,4,7,10, 11, 32, 45, 87], 45))
