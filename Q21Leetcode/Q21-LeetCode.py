@@ -52,6 +52,22 @@ class LinkedList:
             current.next = l2
         
         return dummy.next
+    
+    def MergeTwoListSortedRecursive(self, l1:list, l2:list)->list:
+        if l1 is None:
+            return l2
+        
+        if l2 is None:
+            return l1
+        
+        
+        if l1.data < l2.data:
+            l1.next = self.MergeTwoListSortedRecursive(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.MergeTwoListSortedRecursive(l1, l2.next)
+            return l2
+            
 
 
 mylist = LinkedList()
@@ -64,6 +80,9 @@ print("*****************")
 
 x3 = mylist.MergeTwoListSorted(x1, x2)
 mylist.print(x3)
+
+x4 = mylist.MergeTwoListSortedRecursive(x1, x2)
+mylist.print(x4)
 
 
     
