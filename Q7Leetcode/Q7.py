@@ -17,8 +17,8 @@ class Solution:
         return sign * num
     def reverse1(self, x:int)->int:
         sign = -1 if x < 0 else 1
-        y = str(x)[::-1]
-        return y
+        y = str(abs(x))[::-1]
+        return int(y) * sign
     
     
 number = Solution()
