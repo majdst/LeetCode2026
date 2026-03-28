@@ -1,35 +1,33 @@
 class Dictionary:
-    def checking(self, s:str)->dict:
+    def dicnew(self, s:str)->dict:
 
         newD = {}
-        
         for item in s:
             newD[item] = newD.get(item, 0) + 1
 
         return newD
     
-    def istargetIn(self, s:str, target:int)->int:
-
-        l = len(s)
+    def quest2(self, s:list, target:int):
+        
         newD = {}
+        l = len(s)
+        
         for item in range(l):
-            
+
             trg = target - s[item]
             if trg in newD:
                 return (newD[trg], item)
-            
-            newD[s[item]] = item
-    
-    def firstSingleWord(self, s:str)->str:
+
+            newD[s[item]] = item 
+    def quest3(self, s:str)->str:
+        #"leetcode"
         newD = {}
         for item in s:
             newD[item] = newD.get(item, 0) + 1
-        
-        for item in s:
-            if newD[item] == 1:
-                return item 
-    
-    def dicList(self, s:list):
+        for i in s:
+            if newD[i] == 1:
+                return i
+    def quest4(self, s:list):
 
         newD = {}
         for item in s:
@@ -39,11 +37,13 @@ class Dictionary:
                 newD[key] = [item]
             else:
                 newD[key].append(item)
-            
-        return list(newD.values())
+        
+        return newD.values()
     
-    def dinagram(self, s:list):
+    def quest5(self, s:list)->bool:
+        #"anagram", "nagaram"
         newD = {}
+
         for item in s:
             key = "".join(sorted(item))
 
@@ -54,15 +54,9 @@ class Dictionary:
             
         return len(newD) == 1
     
-        
-        
 x = Dictionary()
-print(x.checking("aabbccmfghghagbc"))
-print("*************")
-print(x.istargetIn([2,7,11,15], 9))
-print("*************")
-print(x.firstSingleWord("eeetmcode"))
-print("*************")
-print(x.dicList(["tea", "eat", "tan", "ate", "nat", "bat"]))
-print("*************")
-print(x.dinagram(["anagram", "nagaram"]))
+print(x.dicnew('abcabccbaqwqd'))
+print(x.quest2([2,4,7, 11, 21], 32))
+print(x.quest3('leetcode'))
+print(x.quest4(["eat","tea","tan","ate","nat","bat"]))
+print(x.quest5(["anagram", "nagaram"]))
