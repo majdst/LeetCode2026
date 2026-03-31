@@ -1,0 +1,4 @@
+You are given the head of a linked list containing unique integer values and an integer array nums that is a subset of the linked list values.
+
+!\[Good Method](01.jpg)
+
