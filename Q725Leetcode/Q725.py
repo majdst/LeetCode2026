@@ -24,31 +24,32 @@ class Solution:
         print('None')
     
     def splitListToParts(self, head:ListNode, k:int)->list:
+        count = 0
+        current = head
 
-        lnght = 0
-        curr = head
-        while curr:
-            lnght += 1
-            curr = curr.next
+        while current:
+            count += 1
+            current = current.next
         
-        ln = lnght // k
-        rem = lnght % k
+        ln = count // k
+        rm = count % k
 
-        listL = []
-        curr = head
+        current = head
+        newL = []
+
         for i in range(k):
-            listL.append(curr)
-            size = ln + (1 if i < rem else 0)
+            newL.append(current)
 
-            for j in range(size - 1):
-                if curr:
-                    curr = curr.next
+            ln1 = ln + (1 if i < rm else 0)
 
-            if curr:
-                curr.next, curr = None, curr.next
+            for _ in range(ln1 - 1):
+                if current:
+                    current = current.next
+
+            if current:
+                current.next, current = None, current.next
         
-        return listL
-
+        return newL
 x = Solution()
 l = x.helper([1,2,3,4,5,6,7,8,9,10])
 y = x.print(l)
