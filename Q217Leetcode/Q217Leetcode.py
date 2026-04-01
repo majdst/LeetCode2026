@@ -10,6 +10,16 @@ class Solution:
                 return True
             
         return False
+    def containsDuplicate1(self, nums: list[int]) -> bool:
+
+        x = set(nums)
+        x1 = list(x)
+
+        if len(x) == len(x1):
+            return False
+        else:
+            return True
         
 x = Solution()
 print(x.containsDuplicate([2,14,18,22,22]))
+print(x.containsDuplicate1([2,14,18,22,22]))
