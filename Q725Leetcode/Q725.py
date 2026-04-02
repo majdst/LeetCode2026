@@ -31,25 +31,24 @@ class Solution:
             count += 1
             current = current.next
         
-        ln = count // k
-        rm = count % k
+        m = count // k
+        n = count % k
 
-        current = head
         newL = []
+        current = head
 
         for i in range(k):
             newL.append(current)
+            ln = m + (1 if i < n else 0)
 
-            ln1 = ln + (1 if i < rm else 0)
-
-            for _ in range(ln1 - 1):
-                if current:
-                    current = current.next
-
+            for _ in range(ln - 1): #ln - 1 because already first element is in newL
+                current = current.next
+            
             if current:
                 current.next, current = None, current.next
-        
+            
         return newL
+        
 x = Solution()
 l = x.helper([1,2,3,4,5,6,7,8,9,10])
 y = x.print(l)
