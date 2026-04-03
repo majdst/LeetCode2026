@@ -52,7 +52,7 @@ class Dictionary:
             else:
                 newD[key].append(item)
             
-        return len(newD) == 1
+        return len(newD.keys()) == 1
     
 x = Dictionary()
 print(x.dicnew('abcabccbaqwqd'))

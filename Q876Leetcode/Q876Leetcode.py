@@ -29,18 +29,12 @@ class LinkedList:
         print("None")
 
     def middle(self, l:Node):
-
-        head = l
-        r = head
-        left = head
-
-        while r and r.next: #This new method makes it perfect and more readible
-
+        right, left = l, l
+        while right and right.next:
             left = left.next
-            r = r.next.next
+            right = right.next.next
 
-        return left
-    
+        return left    
 x = LinkedList()
 x1 = x.helper([1,2,3,4,5])
 x.pr(x1)
