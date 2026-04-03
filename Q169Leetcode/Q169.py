@@ -13,6 +13,24 @@ class Solution:
                 ans = item
         return ans
 
+    def majorityElement1(self, nums: list) -> int:
+#efficient and Time Complexity if O(n)
+        candidate = 0
+        maxL = 0
+
+        for item in nums:
+
+            if maxL == 0:
+                candidate = item
+            
+            if item == candidate:
+                maxL += 1
+            
+            if item != candidate:
+                maxL -= 1
+        
+        return candidate
 
 x = Solution()
-print(x.majorityElement([3,2,3]))
+#print(x.majorityElement([3,2,3]))
+print(x.majorityElement1([3,2,3]))
