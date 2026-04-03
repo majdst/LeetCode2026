@@ -31,11 +31,11 @@ class Solution:
         while current:
             if current.val in newS and (current.next is None or current.next.val not in newS):
                 count += 1
-            
+
             current = current.next
         
         return count
-
+    
 x = Solution()
 y = x.help([0,1,2,3,4])
 x.print(y)

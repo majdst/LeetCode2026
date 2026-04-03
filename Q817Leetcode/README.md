@@ -1,4 +1,10 @@
-You are given the head of a linked list containing unique integer values and an integer array nums that is a subset of the linked list values.
+It's a fun fact. In this question, we should check two items together, 
+
+I) the current item is in the SET()
+
+II) the next one is None or is not next value in SET?
+
+&#x20; 
 
 !\[Good Method](01.jpg)
 
