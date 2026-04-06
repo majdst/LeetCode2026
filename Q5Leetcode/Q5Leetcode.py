@@ -41,5 +41,5 @@ class Solution:
         
     
 x1 = Solution()
-x2 = x1.isPalindrom("ababc")
+x2 = x1.isPalindrom("babad")
 print(x2)
