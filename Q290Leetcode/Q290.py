@@ -23,7 +23,12 @@ class Solution:
                 wordToPattern[c] = p
         
         return True
+    
+    def wordPattern1(self, pattern: str, s: str) -> bool:
+        word = s.split()
+        
+        return len(set(zip(pattern, word))) == len(set(pattern)) == len(set(word)) == len(pattern) == len(word)
 
 
 x = Solution()
-print(x.wordPattern("abba", "fish  cat dog"))
+print(x.wordPattern1("abba", "fish  dog dog fish"))
