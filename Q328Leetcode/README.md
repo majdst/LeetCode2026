@@ -1,4 +1,4 @@
-!\[Good Leetcode](01.jpg)
+![Good Leetcode](01.jpg)
 
 This question needs a deep understanding of leetcode and how it works.
 
