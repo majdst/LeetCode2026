@@ -22,6 +22,17 @@ class solution:
         
         return True
     
-    
+    def isAnagram2(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        for i in set(s):
+            if s.count(i) == t.count(i):
+                continue
+            else:
+                return False
+        
+        return True
+
 x = solution()
 print(x.isAnagram1("a", "ab"))  
