@@ -1,6 +1,7 @@
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
         word = s.split()
+        print(word)
 
         #Check the length
         if len(pattern) != len(word):
@@ -31,4 +32,4 @@ class Solution:
 
 
 x = Solution()
-print(x.wordPattern1("abba", "fish  dog dog fish"))
+print(x.wordPattern("abba", "fish  dog dog fish"))
