@@ -21,5 +21,20 @@ class Solution:
             return newD[x]
         
         return helper(n)
+        
+    def fibo2(self, n:int) ->int:
+
+        if n < 2:
+            return n
+        
+        prev, curr = 0, 1
+
+        for i in range(2, n+1):
+
+            prev, curr = curr, prev+curr
+        
+        return curr
+        
+        
 x = Solution()
-print(x.fibo1(20))
+print(x.fibo2(20))
