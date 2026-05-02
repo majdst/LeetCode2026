@@ -24,10 +24,19 @@ class Solution:
                 return [newL[trg], i]
             
             newL[nums[i]] = i
+    
+    def twoSum3(self, nums:list[int], target:int)->list:
+        l = len(nums)
+        newD = {}
 
-
+        for i, num in enumerate(nums):
+            trg = target - num
+            if trg in newD:
+                return [newD[trg], i]
+            
+            newD[num] = i
 
 numx = [2, 11, 15, 5,  7]
 targ = 9
 solution = Solution()
-print(solution.twoSum2(numx, targ))
+print(solution.twoSum3(numx, targ))
